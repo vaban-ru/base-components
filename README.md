@@ -1,29 +1,3 @@
-# webzlodimir-components
+# Базовые компоненты
 
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Run your unit tests
-```
-yarn test:unit
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Репозиторий для базовых компонентов, что бы таскать их из проекта в проект с небольшой документацией
