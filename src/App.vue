@@ -8,6 +8,9 @@
         <router-link class="app-nav__link" :to="{ name: 'Alert' }"
           >Алерт</router-link
         >
+        <router-link class="app-nav__link" :to="{ name: 'Label' }"
+          >Лейбл</router-link
+        >
       </div>
       <router-view />
     </div>

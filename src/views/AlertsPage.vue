@@ -141,7 +141,7 @@ export default {
   name: "AlertsPage",
   components: { BaseAlert },
   created() {
-    document.title = "Алерты";
+    document.title = "Алерт";
   },
 };
 </script>

@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Button from "../views/ButtonPage.vue";
 import AlertsPage from "@/views/AlertsPage";
+import LabelPage from "@/views/LabelPage";
 
 Vue.use(VueRouter);
 
@@ -19,6 +20,11 @@ const routes = [
     path: "/alert",
     name: "Alert",
     component: AlertsPage,
+  },
+  {
+    path: "/label",
+    name: "Label",
+    component: LabelPage,
   },
 ];
 

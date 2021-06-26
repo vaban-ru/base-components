@@ -290,6 +290,11 @@ export default {
 
   &__icon {
     margin-right: 8px;
+
+    svg,
+    path {
+      fill: currentColor;
+    }
   }
 }
 
