@@ -136,13 +136,13 @@ export default {
      * @returns {boolean}
      */
     hasLoaderSlot() {
-      return !!this.$slots.loader
-    }
+      return !!this.$slots.loader;
+    },
   },
 };
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .btn {
   color: #000000;
   text-align: center;

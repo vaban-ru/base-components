@@ -1,18 +1,24 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Buttons from "../views/ButtonsPage.vue";
+import AlertsPage from "@/views/AlertsPage";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    redirect: "/buttons",
+    redirect: "/button",
   },
   {
-    path: "/buttons",
+    path: "/button",
     name: "Buttons",
     component: Buttons,
+  },
+  {
+    path: "/alert",
+    name: "Alert",
+    component: AlertsPage,
   },
 ];
 

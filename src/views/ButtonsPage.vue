@@ -1,5 +1,5 @@
 <template>
-  <div class="buttons-page">
+  <div class="page">
     <h1>Кнопки</h1>
     <h2>С заливкой</h2>
     <div class="grid">
@@ -43,7 +43,9 @@
       </pre>
     </highlight-code>
     <h2>Кнопка-ссылка</h2>
-    <base-button href="https://google.com/" link blank primary>Кнопка-ссылка</base-button>
+    <base-button href="https://google.com/" link blank primary
+      >Кнопка-ссылка</base-button
+    >
     <highlight-code lang="vue">
       <pre>
         &lt;base-button href=&quot;https://google.com/&quot; link blank primary&gt;Кнопка-ссылка&lt;/base-button&gt;
@@ -71,16 +73,12 @@ export default {
   name: "ButtonsPage",
   components: { BaseButton },
   created() {
-    document.title = 'Кнопки'
-  }
+    document.title = "Кнопки";
+  },
 };
 </script>
 
 <style lang="scss">
-.buttons-page {
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
 .grid {
   display: flex;
 
