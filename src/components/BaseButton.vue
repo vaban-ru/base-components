@@ -95,7 +95,6 @@ export default {
   computed: {
     /**
      * Возвращает список классов для кнопки/ссылки
-     * @returns {[string, {"btn--disabled": Boolean}]}
      */
     buttonClass() {
       return [

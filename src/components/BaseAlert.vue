@@ -16,6 +16,9 @@
 export default {
   name: "BaseAlert",
   props: {
+    /**
+     * Пропсы для классов
+     */
     primary: {
       type: Boolean,
       default: false,
@@ -32,14 +35,30 @@ export default {
       type: Boolean,
       default: false,
     },
+    center: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
+    /**
+     * Проверка на наличие слота title
+     * @returns {boolean}
+     */
     hasTitleSlot() {
       return !!this.$slots.title;
     },
+    /**
+     * Проверка на наличие слота footer
+     * @returns {boolean}
+     */
     hasFooterSlot() {
       return !!this.$slots.footer;
     },
+    /**
+     * Возвращает список классов исходя из прокинутых пропсов
+     * @returns {[string, {"alert--success": Boolean, "alert--secondary": Boolean, "alert--primary": Boolean, "alert--danger": Boolean}]}
+     */
     alertClass() {
       return [
         "alert",
@@ -48,6 +67,7 @@ export default {
           "alert--secondary": this.secondary,
           "alert--success": this.success,
           "alert--danger": this.danger,
+          "alert--center": this.center,
         },
       ];
     },
@@ -78,6 +98,10 @@ export default {
     margin-top: 16px;
     padding-top: 16px;
     border-top: 1px solid currentColor;
+  }
+
+  &--center {
+    text-align: center;
   }
 
   &--primary {

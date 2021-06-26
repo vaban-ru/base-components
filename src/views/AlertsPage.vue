@@ -77,6 +77,20 @@
         &lt;/base-alert&gt;
       </pre>
     </highlight-code>
+    <h2>Алерт с текстом по центру</h2>
+    <base-alert center>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, fugit
+      numquam quas qui saepe tenetur. Accusantium in incidunt iure maxime
+      nesciunt nisi possimus quod veniam voluptatibus. Doloribus laudantium
+      nihil voluptatem!
+    </base-alert>
+    <highlight-code lang="vue">
+      <pre>
+        &lt;base-alert center&gt;
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        &lt;/base-alert&gt;
+      </pre>
+    </highlight-code>
   </div>
 </template>
 
