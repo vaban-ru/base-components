@@ -7,8 +7,8 @@
     :is="component"
     :disabled="disabled"
   >
-    <div class="btn__loader" v-if="hasLoaderSlot">
-      <slot name="loader" />
+    <div class="btn__icon" v-if="hasIconSlot">
+      <slot name="icon" />
     </div>
     <slot />
   </component>
@@ -106,6 +106,7 @@ export default {
           "btn--success": this.success,
           "btn--danger": this.danger,
           "btn--outline": this.outline,
+          "btn--loading": this.loading,
         },
       ];
     },
@@ -131,11 +132,11 @@ export default {
       return this.blank ? "_blank" : false;
     },
     /**
-     * Заполнен ли лоадер
+     * Наличие контента в слоте icon
      * @returns {boolean}
      */
-    hasLoaderSlot() {
-      return !!this.$slots.loader;
+    hasIconSlot() {
+      return !!this.$slots.icon;
     },
   },
 };
@@ -167,6 +168,12 @@ export default {
     background-color: #000000;
     border-color: #000000;
     color: #ffffff;
+  }
+
+  &--loading {
+    .btn__icon {
+      animation: rotate 2s linear infinite;
+    }
   }
 
   &--disabled {
@@ -281,9 +288,8 @@ export default {
     }
   }
 
-  &__loader {
+  &__icon {
     margin-right: 8px;
-    animation: rotate 2s linear infinite;
   }
 }
 
