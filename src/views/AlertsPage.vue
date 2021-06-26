@@ -1,6 +1,12 @@
 <template>
   <div class="page">
-    <h1>Алерт</h1>
+    <h1>
+      <a
+        href="https://github.com/webzlodimir/base-components/blob/master/src/components/BaseAlert.vue"
+        target="_blank"
+        >Алерт</a
+      >
+    </h1>
     <h2>Стандартный</h2>
     <base-alert>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, fugit

@@ -1,6 +1,14 @@
 <template>
   <div id="app">
     <div class="container">
+      <div class="app-nav">
+        <router-link class="app-nav__link" :to="{ name: 'Button' }"
+          >Кнопка</router-link
+        >
+        <router-link class="app-nav__link" :to="{ name: 'Alert' }"
+          >Алерт</router-link
+        >
+      </div>
       <router-view />
     </div>
   </div>
@@ -18,5 +26,24 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.app-nav {
+  display: flex;
+  padding-top: 16px;
+
+  &__link {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+
+    &.router-link-exact-active {
+      text-decoration: underline;
+    }
+
+    & + .app-nav__link {
+      margin-left: 16px;
+    }
+  }
 }
 </style>

@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Buttons from "../views/ButtonsPage.vue";
+import Button from "../views/ButtonPage.vue";
 import AlertsPage from "@/views/AlertsPage";
 
 Vue.use(VueRouter);
@@ -12,8 +12,8 @@ const routes = [
   },
   {
     path: "/button",
-    name: "Buttons",
-    component: Buttons,
+    name: "Button",
+    component: Button,
   },
   {
     path: "/alert",

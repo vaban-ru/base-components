@@ -1,6 +1,12 @@
 <template>
   <div class="page">
-    <h1>Кнопки</h1>
+    <h1>
+      <a
+        href="https://github.com/webzlodimir/base-components/blob/master/src/components/BaseButton.vue"
+        target="_blank"
+        >Кнопка</a
+      >
+    </h1>
     <h2>С заливкой</h2>
     <div class="grid">
       <base-button>Стандартная кнопка</base-button>
@@ -70,10 +76,10 @@
 <script>
 import BaseButton from "@/components/BaseButton";
 export default {
-  name: "ButtonsPage",
+  name: "ButtonPage",
   components: { BaseButton },
   created() {
-    document.title = "Кнопки";
+    document.title = "Кнопка";
   },
 };
 </script>
