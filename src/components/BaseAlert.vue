@@ -1,5 +1,8 @@
 <template>
   <div :class="alertClass">
+    <div v-if="hasIconSlot" class="alert__icon">
+      <slot name="icon" />
+    </div>
     <div v-if="hasTitleSlot" class="alert__title">
       <slot name="title" />
     </div>
@@ -56,6 +59,13 @@ export default {
       return !!this.$slots.footer;
     },
     /**
+     * Проверка на наличие слота icon
+     * @returns {boolean}
+     */
+    hasIconSlot() {
+      return !!this.$slots.icon;
+    },
+    /**
      * Возвращает список классов исходя из прокинутых пропсов
      * @returns {[string, {"alert--success": Boolean, "alert--secondary": Boolean, "alert--primary": Boolean, "alert--danger": Boolean}]}
      */
@@ -68,6 +78,7 @@ export default {
           "alert--success": this.success,
           "alert--danger": this.danger,
           "alert--center": this.center,
+          "alert--icon": this.hasIconSlot,
         },
       ];
     },
@@ -98,6 +109,13 @@ export default {
     margin-top: 16px;
     padding-top: 16px;
     border-top: 1px solid currentColor;
+  }
+
+  &--icon {
+    display: grid;
+    grid-template-columns: 24px auto;
+    column-gap: 16px;
+    align-items: center;
   }
 
   &--center {
