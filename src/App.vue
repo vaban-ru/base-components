@@ -6,10 +6,13 @@
           >Кнопка</router-link
         >
         <router-link class="app-nav__link" :to="{ name: 'Alert' }"
-          >Алерт</router-link
+          >Уведомление</router-link
         >
         <router-link class="app-nav__link" :to="{ name: 'Label' }"
-          >Лейбл</router-link
+          >Значок</router-link
+        >
+        <router-link class="app-nav__link" :to="{ name: 'Input' }"
+          >Поле ввода</router-link
         >
       </div>
       <router-view />

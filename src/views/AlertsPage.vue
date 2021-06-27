@@ -4,10 +4,10 @@
       <a
         href="https://github.com/webzlodimir/base-components/blob/master/src/components/BaseAlert.vue"
         target="_blank"
-        >Алерт</a
+        >Уведомление</a
       >
     </h1>
-    <h2>Стандартный</h2>
+    <h2>Стандартное</h2>
     <base-alert>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, fugit
       numquam quas qui saepe tenetur. Accusantium in incidunt iure maxime
@@ -47,9 +47,9 @@
         &lt;base-alert danger&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/base-alert&gt;
       </pre>
     </highlight-code>
-    <h2>Алерт с заголовком</h2>
+    <h2>Уведомление с заголовком</h2>
     <base-alert>
-      <template #title>Заголовок алерта</template>
+      <template #title>Заголовок уведомления</template>
       <template #default>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi,
         fugit numquam quas qui saepe tenetur. Accusantium in incidunt iure
@@ -60,12 +60,12 @@
     <highlight-code lang="vue">
       <pre>
         &lt;base-alert&gt;
-          &lt;template #title&gt;Заголовок алерта&lt;/template&gt;
+          &lt;template #title&gt;Заголовок уведомления&lt;/template&gt;
           &lt;template #default&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. &lt;/template&gt;
         &lt;/base-alert&gt;
       </pre>
     </highlight-code>
-    <h2>Алерт с футером</h2>
+    <h2>Уведомление с футером</h2>
     <base-alert>
       <template #default>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi,
@@ -73,17 +73,17 @@
         maxime nesciunt nisi possimus quod veniam voluptatibus. Doloribus
         laudantium nihil voluptatem!
       </template>
-      <template #footer> Текст в футере алерта </template>
+      <template #footer> Текст в футере уведомления </template>
     </base-alert>
     <highlight-code lang="vue">
       <pre>
         &lt;base-alert primary&gt;
           &lt;template #default&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. &lt;/template&gt;
-          &lt;template #footer&gt;Текст в футере алерта&lt;/template&gt;
+          &lt;template #footer&gt;Текст в футере уведомления&lt;/template&gt;
         &lt;/base-alert&gt;
       </pre>
     </highlight-code>
-    <h2>Алерт с текстом по центру</h2>
+    <h2>Уведомление с текстом по центру</h2>
     <base-alert center>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, fugit
       numquam quas qui saepe tenetur. Accusantium in incidunt iure maxime
@@ -97,7 +97,7 @@
         &lt;/base-alert&gt;
       </pre>
     </highlight-code>
-    <h2>Алерт с иконкой</h2>
+    <h2>Уведомление с иконкой</h2>
     <base-alert danger>
       <template #icon>
         <svg
@@ -141,7 +141,7 @@ export default {
   name: "AlertsPage",
   components: { BaseAlert },
   created() {
-    document.title = "Алерт";
+    document.title = "Уведомление";
   },
 };
 </script>

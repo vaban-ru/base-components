@@ -354,3 +354,7 @@ template {
     padding-top: 32px;
     padding-bottom: 32px;
 }
+
+h2 {
+    margin-top: 24px;
+}

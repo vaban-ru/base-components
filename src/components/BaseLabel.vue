@@ -73,6 +73,7 @@ export default {
   font-weight: bold;
   line-height: 1;
   padding: 8px;
+  box-sizing: border-box;
 
   &--primary {
     background-color: #0d6efd;

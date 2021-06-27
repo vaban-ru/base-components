@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Button from "../views/ButtonPage.vue";
 import AlertsPage from "@/views/AlertsPage";
 import LabelPage from "@/views/LabelPage";
+import InputPage from "@/views/InputPage";
 
 Vue.use(VueRouter);
 
@@ -25,6 +26,11 @@ const routes = [
     path: "/label",
     name: "Label",
     component: LabelPage,
+  },
+  {
+    path: "/input",
+    name: "Input",
+    component: InputPage,
   },
 ];
 
