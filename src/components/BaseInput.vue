@@ -4,9 +4,12 @@
       <label v-if="label" class="input__label"
         >{{ label }} <span v-if="required">*</span></label
       >
-      <input
+      <component
+        :is="inputComponent"
         class="input__field"
-        :type="type"
+        :type="inputType"
+        :cols="cols"
+        :rows="rows"
         :placeholder="placeholder"
         :required="required"
         :disabled="disabled"
@@ -30,43 +33,87 @@
 export default {
   name: "BaseInput",
   props: {
+    /**
+     * Поле обязательное
+     */
     required: {
       type: Boolean,
       default: false,
     },
+    /**
+     * Текст плейсхолдера
+     */
     placeholder: {
       type: String,
       default: null,
     },
+    /**
+     * Тип поля: text, number
+     */
     type: {
       type: String,
       default: "text",
     },
+    /**
+     * Объект с ошибками
+     * @error.status Boolean
+     * @error.text String
+     */
     error: {
       type: Object,
       default: () => ({}),
     },
+    /**
+     * Описание поля
+     */
     description: {
       type: String,
       default: null,
     },
+    /**
+     * Название поля
+     */
     label: {
       type: String,
       default: null,
     },
+    /**
+     * Значение поля
+     */
     value: {
       type: String,
       default: null,
     },
-    compact: {
-      type: Boolean,
-      default: false,
-    },
+    /**
+     * Поле выключено
+     */
     disabled: {
       type: Boolean,
       default: false,
     },
+    /**
+     * Поле в режиме для чтения
+     */
     readonly: {
+      type: Boolean,
+      default: false,
+    },
+    /**
+     * Убирает стрелки из поле ввода с типом number
+     */
+    noArrows: {
+      type: Boolean,
+      default: false,
+    },
+    cols: {
+      type: Number,
+      default: null,
+    },
+    rows: {
+      type: Number,
+      default: null,
+    },
+    noResize: {
       type: Boolean,
       default: false,
     },
@@ -80,8 +127,18 @@ export default {
         "input",
         {
           "input--error": this.error.status,
+          "input--focused": this.focused,
+          "input--no-arrows": this.noArrows,
+          "input--no-resize": this.noResize,
+          "input--textarea": this.inputComponent === "textarea",
         },
       ];
+    },
+    inputComponent() {
+      return this.type === "textarea" ? "textarea" : "input";
+    },
+    inputType() {
+      return this.type === "textarea" ? false : this.type;
     },
   },
 };
@@ -142,6 +199,26 @@ export default {
     }
     .input__field {
       border-color: red;
+    }
+  }
+  &--no-arrows {
+    .input__field {
+      -moz-appearance: textfield;
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+  }
+  &--textarea {
+    .input__field {
+      resize: vertical;
+    }
+  }
+  &--no-resize {
+    .input__field {
+      resize: none;
     }
   }
 }

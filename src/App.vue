@@ -54,4 +54,9 @@ body {
     }
   }
 }
+.hljs {
+  border-radius: 8px;
+  padding: 16px !important;
+  line-height: 1.5;
+}
 </style>
