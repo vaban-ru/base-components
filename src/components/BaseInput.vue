@@ -105,14 +105,23 @@ export default {
       type: Boolean,
       default: false,
     },
+    /**
+     * Количество колонок textarea
+     */
     cols: {
       type: Number,
       default: null,
     },
+    /**
+     * Количество строк textarea
+     */
     rows: {
       type: Number,
       default: null,
     },
+    /**
+     * Выключает resize у textarea
+     */
     noResize: {
       type: Boolean,
       default: false,

@@ -1,6 +1,6 @@
 {
-  "name": "webzlodimir-components",
-  "version": "0.1.1",
+  "name": "test",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -10,12 +10,11 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "highlight.js": "^9.11.0",
-    "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
-    "vue-highlight.js": "^3.1.0",
     "vue-router": "^3.2.0",
-    "vuex": "^3.4.0"
+    "vuex": "^3.4.0",
+    "highlight.js": "^9.11.0",
+    "vue-highlight.js": "^3.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -35,40 +34,6 @@
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended",
-      "@vue/prettier"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {},
-    "overrides": [
-      {
-        "files": [
-          "**/__tests__/*.{j,t}s?(x)",
-          "**/tests/unit/**/*.spec.{j,t}s?(x)"
-        ],
-        "env": {
-          "jest": true
-        }
-      }
-    ]
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ],
-  "jest": {
-    "preset": "@vue/cli-plugin-unit-jest"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
